@@ -23,6 +23,10 @@ class Weather extends Component {
 				return 'Est';
 			} else if (dat==='O'){
 				return 'Ouest';
+			}	else if (dat==='ENE'){
+				return 'Est-Nord-Est';	
+			}else if (dat==='ONO'){
+				return 'Ouest-Nord-Ouest';
 			}
 	};
 	
