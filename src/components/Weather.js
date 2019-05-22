@@ -24,21 +24,21 @@ class Weather extends Component {
 			} else if (dat==='O'){
 				return 'Ouest';
 			} else if (dat==='ENE'){
-				return 'Est-Nord-Est';	
+				return 'E-Nord-Est';	
 			} else if (dat==='ONO' || 'WNW'){
-			        return 'Ouest-Nord-Ouest';
+			        return 'O-Nord-Ouest';
 			} else if (dat==='OSO' || 'WSW'){
-			        return 'Ouest-Sud-Ouest';
+			        return 'O-Sud-Ouest';
 			} else if (dat==='ESE'){
 			        return 'Est-Sud-Est';
 			} else if (dat==='NNE'){
-			        return 'Nord-Nord-Est';
+			        return 'N-Nord-Est';
 			} else if (dat==='NNO' || 'NNW'){
-			        return 'Nord-Nord-Ouest';
+			        return 'N-Nord-Ouest';
 			} else if (dat==='SSE'){
-			        return 'Sud-Sud-Est';
+			        return 'S-Sud-Est';
 			} else if (dat==='SSO' || 'SSW'){
-			        return 'Sud-Sud-Ouest';
+			        return 'S-Sud-Ouest';
 			}
 	};
 	
