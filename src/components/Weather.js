@@ -49,7 +49,7 @@ class Weather extends Component {
 		`min : ${this.props.data.Temperature.Minimum.Value}°c,  
 		max : ${this.props.data.Temperature.Maximum.Value}°c`;		
 		let wind=
-		`${this.props.data.Day.Wind.Speed.Value}km/h, ${this.windDirection(this.props.data.Day.Wind.Direction.Localized)}`;
+		`${round(this.props.data.Day.Wind.Speed.Value)}km/h, ${this.windDirection(this.props.data.Day.Wind.Direction.Localized)}`;
 		return (
 			<div className="day">
 				<div class="card">
