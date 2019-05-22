@@ -25,19 +25,19 @@ class Weather extends Component {
 				return 'Ouest';
 			} else if (dat==='ENE'){
 				return 'Est-Nord-Est';	
-			} else if (dat==='ONO'){
+			} else if (dat==='ONO' || 'WNW'){
 			        return 'Ouest-Nord-Ouest';
-			} else if (dat==='OSO'){
+			} else if (dat==='OSO' || 'WSW'){
 			        return 'Ouest-Sud-Ouest';
 			} else if (dat==='ESE'){
 			        return 'Est-Sud-Est';
 			} else if (dat==='NNE'){
 			        return 'Nord-Nord-Est';
-			} else if (dat==='NNO'){
+			} else if (dat==='NNO' || 'NNW'){
 			        return 'Nord-Nord-Ouest';
 			} else if (dat==='SSE'){
 			        return 'Sud-Sud-Est';
-			} else if (dat==='SSO'){
+			} else if (dat==='SSO' || 'SSW'){
 			        return 'Sud-Sud-Ouest';
 			}
 	};
