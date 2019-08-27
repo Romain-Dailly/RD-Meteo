@@ -11,7 +11,7 @@ const AutoCompleteSearch = ({location}) => {
 
   const onSearch = value => {
     value !== 'location' &&
-    axios.get(`http://dataservice.accuweather.com/locations/v1/cities/autocomplete?apikey=${apiKey}&q=${value}&language=fr-fr`)
+    axios.get(`https://dataservice.accuweather.com/locations/v1/cities/autocomplete?apikey=${apiKey}&q=${value}&language=fr-fr`)
     .then(response => {
       setAllFetchData([...new Set(response.data)].map((da, key) => Object.assign({ key:da.Key, city:da.LocalizedName, country:da.Country.LocalizedName, index:key})));
     });
