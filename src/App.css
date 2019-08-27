@@ -1,6 +1,13 @@
 body{
   background-color: #044851;
 }
+ul{
+  background-color: white;
+  list-style-type:none;
+}
+.long-text{
+  font-size:32px;
+}
 .bg{
   display:flex;
   justify-content:center;
@@ -11,10 +18,11 @@ body{
 .geo{
   justify-content:center;
 }
+.day{
+  margin:auto;
+}
 .card{
   margin-top: 2rem;
-  max-height:440.8px;
-  max-width: 241px;
   margin-bottom: 2rem;
   background-color:#d1e8ff;
   display:flex;

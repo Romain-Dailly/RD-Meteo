@@ -1,12 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
 import moment from 'moment';
 import 'moment/locale/fr';
 
 moment.locale('fr');
 
-class Weather extends Component {
+const Weather = ({ data }) => {
 
-	windDirection = (dat) => {
+	let windDirection = (dat) => {
 		if (dat==='NE'){
 				return'Nord-Est';
 			} else if (dat==='NO'){
@@ -39,34 +39,33 @@ class Weather extends Component {
 			        return 'Sud-Est';
 			} else if (dat==='SSO' || 'SSW'){
 			        return 'Sud-Ouest';
-			}
+			};
 	};
 	
-	render() {
-		let linkImage = 
-		`https://vortex.accuweather.com/adc2010/images/slate/icons/${this.props.data.Day.Icon}.svg`;
-		let temp =
-		`min : ${this.props.data.Temperature.Minimum.Value}°c,  
-		max : ${this.props.data.Temperature.Maximum.Value}°c`;		
-		let wind=
-		`${Math.round(this.props.data.Day.Wind.Speed.Value)}km/h, ${this.windDirection(this.props.data.Day.Wind.Direction.Localized)}`;
-		return (
-			<div className="day">
-				<div class="card">
-					<div class="card-header d-flex justify-content-center">
-						<h5 class="card-title ">{moment(this.props.data.Date).format("dddd Do MMMM")}</h5>
+  let linkImage = 
+  `https://vortex.accuweather.com/adc2010/images/slate/icons/${data.Day.Icon}.svg`;
+  let temp =
+  `min : ${data.Temperature.Minimum.Value}°c,  
+  max : ${data.Temperature.Maximum.Value}°c`;		
+  let wind=
+  `${Math.round(data.Day.Wind.Speed.Value)}km/h, ${windDirection(data.Day.Wind.Direction.Localized)}`;
+
+	return (
+			<div className="day col-sm-8 col-md-4 col-lg-3 offset-sm-2 offset-md-0">
+				<div className="card d-flex justify-content-center">
+					<div className="card-header d-flex justify-content-center">
+						<h5 className="card-title ">{moment(data.Date).format("dddd Do MMMM")}</h5>
 					</div>
-					<img src={linkImage} class="card-img-top p-2" alt="logo" />
-					<div class="card-body">
-						<h6 class="card-text d-flex justify-content-center ">Températures</h6>
-						<h6 class="card-text d-flex justify-content-center ">{temp}</h6>
-						<h6 class="card-text d-flex justify-content-center ">Vent</h6>
-						<h6 class="card-text d-flex justify-content-center">{wind}</h6>
+					<img src={linkImage} className="card-img-top p-2" alt="logo" />
+					<div className="card-body">
+						<h6 className="card-text d-flex justify-content-center ">Températures</h6>
+						<h6 className="card-text d-flex justify-content-center ">{temp}</h6>
+						<h6 className="card-text d-flex justify-content-center ">Vent</h6>
+						<h6 className="card-text d-flex justify-content-center">{wind}</h6>
 					</div>
 				</div>
 			</div>
-		)
-	}
-}
+	);
+};
 
 export default Weather;
