@@ -35,6 +35,9 @@ ul{
   max-height: 15rem;
   min-height:15rem;
 }
+.card-title{
+  margin-bottom:6px;
+}
 .card-header{
   background-color:#d1e8ff;
   font-weight:bold;
@@ -44,6 +47,10 @@ ul{
 }
 .card-body{
   background-color:#b5daff;
+}
+.moon{
+  opacity:0.5;
+
 }
 .card-deck{
   height:100%;

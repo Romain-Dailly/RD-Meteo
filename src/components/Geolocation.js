@@ -32,6 +32,7 @@ const Geolocation = () => {
               country:res.data.Country.LocalizedName, 
               weatherData: weatherData.data.DailyForecasts
             });
+            console.log(weatherData.data.DailyForecasts);
           });
         });
       });
