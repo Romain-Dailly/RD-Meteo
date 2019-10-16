@@ -48,15 +48,20 @@ const Weather = ({ data }) => {
   `min : ${data.Temperature.Minimum.Value}°c,  
   max : ${data.Temperature.Maximum.Value}°c`;		
   let wind=
-  `${Math.round(data.Day.Wind.Speed.Value)}km/h, ${windDirection(data.Day.Wind.Direction.Localized)}`;
-	let moonIcon=`http://icons.wunderground.com/graphics/moonpictsnew/moon${data.Moon.Age}.gif`
+	`${Math.round(data.Day.Wind.Speed.Value)}km/h, ${windDirection(data.Day.Wind.Direction.Localized)}`;
+	let moonIcon=`http://icons.wunderground.com/graphics/moonpictsnew/moon${data.Moon.Age}.gif`;
 	return (
 			<div className="day col-sm-8 col-md-4 col-lg-3 offset-sm-2 offset-md-0">
 				<div className="card d-flex justify-content-center">
 					<div className="card-header d-flex justify-content-center">
-						<h5 className="card-title ">{moment(data.Date).format("dddd Do MMMM")}</h5>
+						<h5 className="card-title ">{moment(data.Date).format("ddd Do MMMM")}</h5>
 					</div>
-						<img className="moon d-flex justify-content-center" src={moonIcon} alt='moon' style={data.Moon.Age=15?{'margin':'auto','opacity':'1'}:{'margin':'auto'}}/>
+					{data.Moon.Age===15 && 
+					<div style={{'textAlign':'center'}}>
+						<p style={{'margin':'auto','opacity':'0.5'}}>Pleine Lune</p>
+					</div>
+					}
+					<img className="moon d-flex justify-content-center" src={moonIcon} alt='moon' style={{'margin':'auto','opacity':'0.5'}}/>
 					<img src={linkImage} className="card-img-top p-2" alt="logo"/>
 					<div className="card-body">
 						<h6 className="card-text d-flex justify-content-center ">Températures</h6>

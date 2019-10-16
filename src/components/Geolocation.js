@@ -32,7 +32,6 @@ const Geolocation = () => {
               country:res.data.Country.LocalizedName, 
               weatherData: weatherData.data.DailyForecasts
             });
-            console.log(weatherData.data.DailyForecasts);
           });
         });
       });
@@ -76,7 +75,7 @@ const Geolocation = () => {
             : 'd-flex justify-content-center'
         }
       >
-        {city ? `${city},` : null}
+        {city ? `${city}` : null}
       </h1>
       <h1 className="d-flex justify-content-center">
         {city ? `${country}` : null}
