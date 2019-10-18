@@ -61,7 +61,7 @@ const Weather = ({ data }) => {
 						<p style={{'margin':'auto','opacity':'0.5'}}>Pleine Lune</p>
 					</div>
 					}
-					<img className="moon d-flex justify-content-center" src={moonIcon} alt='moon' style={{'margin':'auto','opacity':'0.5'}}/>
+					<img className="moon d-flex justify-content-center" src={moonIcon} alt='moon' style={{'margin':'auto'}}/>
 					<img src={linkImage} className="card-img-top p-2" alt="logo"/>
 					<div className="card-body">
 						<h6 className="card-text d-flex justify-content-center ">Températures</h6>

@@ -31,6 +31,10 @@ ul{
   box-shadow: 5px 3px 3px #091a2b;
   border-radius: 4px;
 }
+.moon {
+  border-radius: 50%;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0);
+}
 .card-img-top{
   max-height: 15rem;
   min-height:15rem;
@@ -48,10 +52,7 @@ ul{
 .card-body{
   background-color:#b5daff;
 }
-.moon{
-  opacity:0.5;
 
-}
 .card-deck{
   height:100%;
 }
